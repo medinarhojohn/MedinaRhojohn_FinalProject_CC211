@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rhojohn Medina | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a href="#home" class="logo" aria-label="RM home">RM</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+    <nav id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">About Me</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <section id="home" class="hero">
+      <p class="eyebrow">Hello, I'm Rhojohn Medina</p>
+      <h1>My Portfolio</h1>
+      <p class="tagline">2nd-year BS Computer Science student turning ideas into code.</p>
+      <div class="hero-buttons">
+        <a href="#about" class="btn">About Me</a>
+        <a href="#contact" class="btn btn-outline">Contact Me</a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <div class="about-grid">
+        <div class="photo-frame">
+          <img src="images/profile.jpg" alt="Photo of Rhojohn Medina" id="profilePhoto" />
+          <span class="photo-fallback" id="photoFallback">RM</span>
+        </div>
+        <div class="about-text">
+          <p>
+            I'm Rhojohn Medina, a 2nd-year Bachelor of Science in Computer Science student at the
+            Polytechnic College of Botolan. I enjoy building things, learning how software works,
+            and getting a little better at it every day.
+          </p>
+          <p>
+            Outside of class, you'll find me gaming, cooking, or playing badminton. Each of them
+            teaches me something I use when I code: strategy, patience, and teamwork.
+          </p>
+          <blockquote>
+            "Programming isn't about what you know; it's about what you can figure out."
+            <cite>- Chris Pine</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS CAROUSEL -->
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <div class="carousel" id="carousel">
+        <button class="arrow prev" id="prevBtn" aria-label="Previous skill">&#10094;</button>
+
+        <div class="carousel-window">
+          <div class="carousel-track" id="track">
+            <article class="slide">
+              <div class="icon">🎮</div>
+              <h3>Gaming</h3>
+              <p>Quick thinking, strategy, and teamwork under pressure.</p>
+            </article>
+            <article class="slide">
+              <div class="icon">🍳</div>
+              <h3>Cooking</h3>
+              <p>Following recipes step by step, and improvising when things change.</p>
+            </article>
+            <article class="slide">
+              <div class="icon">🏸</div>
+              <h3>Badminton</h3>
+              <p>Fast reflexes, discipline, and staying focused for the whole match.</p>
+            </article>
+          </div>
+        </div>
+
+        <button class="arrow next" id="nextBtn" aria-label="Next skill">&#10095;</button>
+      </div>
+      <div class="dots" id="dots"></div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p><strong>Email:</strong> <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+          <p><strong>Facebook:</strong> <a href="https://facebook.com/your.profile" target="_blank" rel="noopener">facebook.com/your.profile</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+639000000000">+63 900 000 0000</a></p>
+          <div class="socials">
+            <a href="https://instagram.com/your.handle" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://t.me/your_handle" target="_blank" rel="noopener">Telegram</a>
+            <a href="https://twitter.com/your_handle" target="_blank" rel="noopener">Twitter</a>
+          </div>
+        </div>
+
+        <form id="contactForm" novalidate>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" />
+          <small class="error" id="nameError"></small>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" />
+          <small class="error" id="emailError"></small>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Write your message..."></textarea>
+          <small class="error" id="messageError"></small>
+
+          <button type="submit" class="btn">Send Message</button>
+          <p class="success" id="formSuccess" hidden>Thanks! Your message passed validation.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Rhojohn Medina. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
